@@ -1,0 +1,22 @@
+
+#theadResults
+{
+
+  background-color: rgb(63, 0, 63);
+  color:white;
+}
+
+#navigation
+{
+    background-color: rgb(63, 0, 63);
+    color:white;
+}
+
+.nav-link
+{
+    color:white;
+}
+.nav-link:hover
+{
+    color: rgb(235, 223, 57);
+}

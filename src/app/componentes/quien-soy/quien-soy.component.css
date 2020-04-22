@@ -1,0 +1,55 @@
+.imagenDeQuienSoy{
+    width: 50%;
+   
+    }
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #033b72;
+}
+p {font-size: 16px;}
+
+.container-fluid {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+#QuienSoy{
+    width:  30%;
+    padding-left: 25px;
+    text-align:center;
+    padding-top:5px;
+    
+}
+
+#TP{
+    padding-top:85px;
+    background-color: gray;
+}
+
+#donde
+{
+    background-color:rgb(59, 0, 47);
+    color:white;
+}
+
+#foot
+{
+    background-color: #270025;
+    text-align: left;
+    color:white;
+}

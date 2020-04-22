@@ -1,0 +1,39 @@
+<app-menu></app-menu>
+
+<hr>
+
+<ul class="nav" id="navigation">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Todos los jugadores</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Los ganadores</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Los perdedores</a>
+  </li>
+</ul>
+
+
+
+
+<hr>
+<table class="table table-striped" id="tablaResults" class="mat-elevation-z8" style="width: 100%; padding: 10px;">
+  <thead id="theadResults">
+      <tr>
+        <th>Usuario</th>
+        <th>Cuit</th>
+        <th>Sexo</th>
+        <th>Gano</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jugador of listado" >
+      <td>{{jugador.usuario}} </td>
+      <td>{{jugador.cuit}} </td> 
+      <td>{{jugador.sexo | sexo| uppercase}} </td> 
+      <td>{{jugador.gano}} </td> 
+      
+    </tr>
+  </tbody>
+</table>

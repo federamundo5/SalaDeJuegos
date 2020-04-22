@@ -1,0 +1,47 @@
+
+<app-menu></app-menu>
+
+
+<app-cabecera>  </app-cabecera>
+
+
+
+<div class="menu-container">
+  
+  <div class="hex-wrapper" routerLink="/Juegos">
+    <div class="hex-row shift">
+      <div class="hexagon" id="nav-home" >
+        <h1 id="titulo">Juegos</h1>      
+        <img src="./assets/imagenes/sala.png" class="media-object imagenDeMenu" >
+                <div class="face1"></div>
+        <div class="face2"></div>
+      </div>
+    </div>
+
+
+    <div class="hex-row" >
+      <div class="hexagon"  routerLink="/Listado" id="nav-about">
+        <h1 id="titulo">Listado</h1>      
+        <img src="./assets/imagenes/results.png" class="media-object imagenDeMenu" >
+        <div class="face1"></div>
+        <div class="face2"></div>
+      </div>
+
+      <div class="hexagon" id="nav-work" routerLink="/Juegos">
+        <img src="./assets/imagenes/settings.png" class="media-object imagenDeMenu" >
+
+        <div class="face1"></div>
+        <div class="face2"></div>
+      </div>
+
+    </div>
+    <div class="hex-row shift">
+      <div class="hexagon" routerLink="/Jugadores" id="nav-contact">
+        <h1 id="titulo" style="font-size:20px;">Jugadores</h1>      
+        <img src="./assets/imagenes/jugando.png" class="media-object imagenDeMenu" >
+        <div class="face1"></div>
+        <div class="face2"></div>
+      </div>
+    </div>
+  </div>
+</div>

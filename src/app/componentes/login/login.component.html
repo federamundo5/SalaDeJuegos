@@ -1,0 +1,32 @@
+
+ <div class="container" >
+    <form action="return true;">
+      <div class="imgcontainer">
+        <img src="./assets/imagenes/login.png" alt="Avatar" class="avatar" width="150px" >
+      </div>
+
+      <div class="container">
+        <label><b>Usuario</b></label>
+        <input type="text" placeholder="Usuario"  [(ngModel)]="usuario"  name="uname" required>
+
+        <label><b>Clave</b></label>
+        <input type="password" placeholder="Clave"  [(ngModel)]="clave" name="psw" required>
+            
+        <button *ngIf="logeando"  (click)="MoverBarraDeProgreso()" >Ingresar</button>
+       
+        <div *ngIf="!logeando" class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped active" [class]="clase" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" [style.width]="ProgresoDeAncho" >
+              {{progresoMensaje}} - {{progreso}}%
+            </div>
+        </div>
+       
+        <input type="checkbox" checked="checked"> Recordar mis datos
+      </div>
+
+        <button type="button" class="cancelbtn">Cancelar</button>
+        <span class="psw">Te olvidaste <a href="#">la clave?</a></span>
+        <button type="button" class="aceptbtn" routerLink="/Registro" >Registrarse</button>
+
+     
+    </form>
+</div>
