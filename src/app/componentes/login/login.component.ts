@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import {Subscription, BehaviorSubject} from "rxjs";
+import {Usuario} from '../../clases/Usuario'
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,8 +12,12 @@ import {Subscription, BehaviorSubject} from "rxjs";
 export class LoginComponent implements OnInit {
 
   private subscription: Subscription;
-  usuario = '';
-  clave= '';
+
+
+Usuario = new Usuario();
+
+
+
   progreso: number;
   progresoMensaje="esperando..."; 
   logeando=true;
@@ -31,10 +37,14 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    if (this.usuario === 'admin' && this.clave === 'admin') {
+    if (this.Usuario.nombre === 'admin' && this.Usuario.clave === 'admin') {
+      localStorage.setItem('usuario', JSON.stringify(this.Usuario));
       this.router.navigate(['/Principal']);
     }
   }
+
+
+
   MoverBarraDeProgreso() {
     
     this.logeando=false;

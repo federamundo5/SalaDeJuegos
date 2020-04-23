@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import {UserServiceService} from '../../servicios/user-service.service';
+
 
 @Component({
   selector: 'app-menu',
