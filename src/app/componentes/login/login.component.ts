@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import {Subscription, BehaviorSubject} from "rxjs";
-import {Usuario} from '../../clases/Usuario'
+import {Usuario} from '../../clases/usuario'
 
 @Component({
   selector: 'app-login',
