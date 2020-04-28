@@ -23,7 +23,10 @@ export class AdivinaElNumeroComponent implements OnInit {
   generarnumero() {
     this.nuevoJuego.generarnumero();
     this.contador=0;
+    this.verificar();
   }
+
+
   verificar()
   {
     this.contador++;
@@ -43,7 +46,7 @@ export class AdivinaElNumeroComponent implements OnInit {
           mensaje="No, intento fallido, animo";
           break;
           case 2:
-          mensaje="No,Te estaras Acercando???";
+          mensaje="No, Te estaras Acercando???";
           break;
           case 3:
           mensaje="No es, Yo crei que la tercera era la vencida.";
@@ -62,7 +65,7 @@ export class AdivinaElNumeroComponent implements OnInit {
             mensaje="Ya le erraste "+ this.contador+" veces";
           break;
       }
-      this.MostarMensaje("#"+this.contador+" "+mensaje+" ayuda :"+this.nuevoJuego.retornarAyuda());
+      this.MostarMensaje("#"+this.contador+" "+mensaje+" ayuda :   "+this.nuevoJuego.retornarAyuda());
      
 
     }

@@ -55,6 +55,13 @@ import { InputJugadoresComponent } from './componentes/input-jugadores/input-jug
 import { SexoPipe } from './pipes/sexo.pipe';
 import { MatCardModule } from '@angular/material/card';
 import { MatSliderModule } from '@angular/material/slider';
+import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -81,15 +88,20 @@ import { MatSliderModule } from '@angular/material/slider';
     MapaDeGoogleComponent,
     JugadoresListadoComponent,
     InputJugadoresComponent,
-    SexoPipe
+    SexoPipe,
+    PiedraPapelTijeraComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RuteandoModule,
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatCheckboxModule,
     HttpClientModule,
     MatCardModule,
     MatSliderModule,
+    MatToolbarModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })
