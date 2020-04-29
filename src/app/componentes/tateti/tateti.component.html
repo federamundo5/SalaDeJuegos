@@ -1,0 +1,50 @@
+<body class="panel">
+    <h1 style="color: rgba(37, 0, 28); text-align:center">Tateti</h1>
+    <form name="juego">
+        <ul>
+          <div  class="row tablero">
+            <table class="table table-bordered col-sm-10 col-md-6 col-lg-6">
+              <tbody>
+                  <tr>
+                      <td class="borde-right" (click)="this.marcarJugada(0,0,false)">
+                          <img src={{this.juego.tablero[0][0]}} alt="">
+                      </td>
+                      <td class="borde-right" (click)="this.marcarJugada(0,1,false)">
+                          <img src={{this.juego.tablero[0][1]}} alt="">
+                      </td>
+                      <td (click)="this.marcarJugada(0,2,false)">
+                          <img src={{this.juego.tablero[0][2]}} alt="">
+                      </td>
+                  </tr>
+                  <tr id="center-row">
+                      <td class="borde-right" (click)="this.marcarJugada(1,0,false)">
+                          <img src={{this.juego.tablero[1][0]}} alt="">
+                      </td>
+                      <td class="borde-right" (click)="this.marcarJugada(1,1,false)">
+                          <img src={{this.juego.tablero[1][1]}} alt="">
+                      </td>
+                      <td (click)="this.marcarJugada(1,2,false)">
+                          <img src={{this.juego.tablero[1][2]}} alt="">
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="borde-right" (click)="this.marcarJugada(2,0,false)">
+                          <img src={{this.juego.tablero[2][0]}} alt="">
+                      </td>
+                      <td class="borde-right" (click)="this.marcarJugada(2,1,false)">
+                          <img src={{this.juego.tablero[2][1]}} alt="">
+                      </td>
+                      <td (click)="this.marcarJugada(2,2,false)">
+                          <img src={{this.juego.tablero[2][2]}} alt="">
+                      </td>
+                  </tr>
+              </tbody>
+            </table>
+            
+            <br>
+        
+          </div>
+        </ul>
+        </form>
+        <div id="snackbar">{{Mensajes}}</div>
+    </body>

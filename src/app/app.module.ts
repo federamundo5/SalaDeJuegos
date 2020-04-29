@@ -62,6 +62,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
+import { TatetiComponent } from './componentes/tateti/tateti.component';
 
 
 @NgModule({
@@ -89,7 +90,8 @@ import { MatButtonModule } from '@angular/material/button';
     JugadoresListadoComponent,
     InputJugadoresComponent,
     SexoPipe,
-    PiedraPapelTijeraComponent
+    PiedraPapelTijeraComponent,
+    TatetiComponent
   ],
   imports: [
     BrowserModule,

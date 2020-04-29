@@ -49,6 +49,10 @@ export class JuegoPiedraPapelTijera extends  Juego {
             return false;
             break;
         }
+
+      }
+
+    }
   
 
-}
+

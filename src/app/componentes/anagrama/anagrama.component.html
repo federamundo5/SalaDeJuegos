@@ -1,3 +1,28 @@
-<p>
-  anagrama works!
-</p>
+
+
+
+
+  <div id="container" style="background-color: rgb(49, 0, 54); color:white">
+    <h1 style="text-align:center">
+      Anagrama
+    </h1>
+      <div class="row">
+  <form name="juego">
+    <ul>
+      <div [hidden]="!ocultarVerificar"> 
+        Palabra:
+        <h3>{{juego.palabraDesordenada}}</h3>
+        Respuesta: <input [(ngModel)]="juego.palabraUsuario" placeholder="Ingrese la Palabra" name="palabraIngresada" type="text" class="form-control" style="width:100%"/>
+        <br>
+    
+      </div>
+      <h2 [hidden]="!ocultarVerificar" ><button (click)="Verificar()" class="btn btn-success btn-warn">Verificar</button></h2>
+      <button  (click)="Jugar()" class ="btn btn-lg" id ="btnJugar">Generar Palabra</button>
+    </ul>
+    </form>
+      </div>
+  </div>
+
+  
+  <div id="snackbar">{{Mensajes}}</div>
+  
