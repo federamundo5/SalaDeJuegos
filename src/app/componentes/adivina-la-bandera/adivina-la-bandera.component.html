@@ -1,0 +1,27 @@
+
+            <h1 style="color: rgba(37, 0, 28); text-align:center">Adivina La Bandera</h1>
+
+
+    <div class="container-fluid" style="background-color:lightgray;">
+        <div class="row" id="row">
+          <div class="col" id="bandera">
+            <span style="width:100%;line-height: 350px" class="flag-icon flag-icon-{{nuevoJuego.randomNationISOCode | lowercase}}"></span>
+          </div>
+          <div class="col" >
+            <form>
+                <div class="form-group" style="margin-top: 15%;">
+                  <label for="exampleInputEmail1">Ingrese el Nombre de la bandera:</label>
+                  <input type="text" [(ngModel)]="nuevoJuego.PaisElegido"  class="form-control" id="nuevoJuego.PaisElegido" name="nuevoJuego.PaisElegido"  placeholder="Ingrese la bandera">
+                </div>
+        
+                <button type="button" (click)="Verificar()" class="botonAdivinar">Adivinar</button>
+                <button type="button" (click)="Pasar()" class="botonPasar">Pasar</button>
+              </form>
+            </div>
+      
+        
+      
+
+
+
+            <div id="snackbar">{{Mensajes}}</div>

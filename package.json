@@ -27,6 +27,7 @@
     "bootstrap": "^4.4.1",
     "bubble": "^0.1.0",
     "express": "^4.17.1",
+    "flag-icon-css": "^3.4.6",
     "font-awesome": "^4.7.0",
     "git": "^0.1.5",
     "heroku": "^7.39.5",

@@ -63,6 +63,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { TatetiComponent } from './componentes/tateti/tateti.component';
+import { AdivinaLaBanderaComponent } from './componentes/adivina-la-bandera/adivina-la-bandera.component';
 
 
 @NgModule({
@@ -91,7 +92,8 @@ import { TatetiComponent } from './componentes/tateti/tateti.component';
     InputJugadoresComponent,
     SexoPipe,
     PiedraPapelTijeraComponent,
-    TatetiComponent
+    TatetiComponent,
+    AdivinaLaBanderaComponent
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,7 @@ import { JugadoresListadoComponent } from '../componentes/jugadores-listado/juga
 import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/piedra-papel-tijera.component';
 import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { TatetiComponent } from '../componentes/tateti/tateti.component';
+import { AdivinaLaBanderaComponent } from '../componentes/adivina-la-bandera/adivina-la-bandera.component';
 
 
 // declaro donde quiero que se dirija
@@ -49,6 +50,7 @@ children:
       {path: 'PiedraPapelTijera' , component: PiedraPapelTijeraComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'TaTeTi' , component: TatetiComponent},
+      {path: 'AdivinaLaBandera' , component: AdivinaLaBanderaComponent},
       {path: 'Anagrama' , component: AnagramaComponent}]   
 
 },
