@@ -1,5 +1,7 @@
 
 import { Component, OnInit , Input, EventEmitter} from '@angular/core';
+import { LISTADO } from '../../listado'
+import { Elemento } from '../../clases/listado'
 
 @Component({
   selector: 'app-listado-de-resultados',
@@ -7,19 +9,24 @@ import { Component, OnInit , Input, EventEmitter} from '@angular/core';
   styleUrls: ['./listado-de-resultados.component.css']
 })
 export class ListadoDeResultadosComponent implements OnInit {
- @Input()
- listado: Array<any>;
+  listado: Array<any>;
+
+
 
 
   constructor() {
+
    }
 
   ngOnInit() {
+   
+  this.listado =  this.listado = JSON.parse(localStorage.getItem("juegos")); 
+
+    console.log(this.listado);
 
   }
 
   ver() {
-    console.info(this.listado);
   }
 
 }

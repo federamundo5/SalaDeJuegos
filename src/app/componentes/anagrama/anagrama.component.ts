@@ -33,11 +33,13 @@ export class AnagramaComponent implements OnInit {
     this.ocultarVerificar = false;
 
     if(this.juego.verificar())
-    {
+    {      
+      this.juego.Grabar("Anagrama", "Gano");
       this.MostarMensaje("Ganaste", true);
     }
     else
     {
+      this.juego.Grabar("Anagrama", "Perdio");
       this.MostarMensaje("Perdiste", false);
     }
   }

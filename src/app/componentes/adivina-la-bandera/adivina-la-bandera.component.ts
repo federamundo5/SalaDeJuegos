@@ -34,6 +34,7 @@ export class AdivinaLaBanderaComponent implements OnInit {
    {
 
     mensaje="Ganaste";
+    this.nuevoJuego.Grabar("Adivina la Bandera", "Gano");
     this.MostarMensaje(mensaje,true);
     this.nuevoJuego.Jugar();
 
@@ -41,6 +42,7 @@ export class AdivinaLaBanderaComponent implements OnInit {
      }
       else{  
           mensaje="Perdiste";
+          this.nuevoJuego.Grabar("Adivina la Bandera", "Perdio");
           this.MostarMensaje(mensaje);      
           this.nuevoJuego.Jugar();
           }

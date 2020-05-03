@@ -76,13 +76,14 @@ this.nuevoJuego.generarValores();
       this.nuevoJuego.gano=true;
       this.enviarJuego.emit(this.nuevoJuego);
       clearInterval(this.repetidor);
-      console.log("ganaste");
+      this.nuevoJuego.Grabar("Agilidad Aritmetica", "Gano");
       mensaje="Ganaste";
       this.MostarMensaje(mensaje,true);
       console.info(this.nuevoJuego);
     }
     else
     {
+      this.nuevoJuego.Grabar("Agilidad Aritmetica", "Perdio");
       mensaje="Perdiste";
       this.MostarMensaje(mensaje);
       

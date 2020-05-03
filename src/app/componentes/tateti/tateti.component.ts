@@ -113,8 +113,10 @@ export class TatetiComponent implements OnInit {
     if(ganador)
       {
         x.className = "show Ganador";
+        this.juego.Grabar("TaTeTi", "Gano");
       }else{
         x.className = "show Perdedor";
+        this.juego.Grabar("TaTeTi", "Perdio");
       }
     setTimeout(function(){ 
       x.className = x.className.replace("show", "");

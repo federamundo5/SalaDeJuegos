@@ -9,7 +9,11 @@ export class JugadoresListadoComponent implements OnInit {
 
   listado:any
   miJugadoresServicio:JugadoresService
-  
+   listaJugadores: any;
+
+
+ usersArray: Array<string>;
+
     constructor(serviceJugadores:JugadoresService) {
       this.miJugadoresServicio = serviceJugadores;
       
@@ -18,30 +22,56 @@ export class JugadoresListadoComponent implements OnInit {
 
 
   ngOnInit() {
+    this.usersArray = new Array();
+
+   var victorias = {};
+   var derrotas  ={};
+   var data = [];
+
+   this.listado =  JSON.parse(localStorage.getItem('juegos'));
+
+
+   for (var i = 0; i < this.listado.length; i++) {
+    if(!this.usersArray.includes(this.listado[i].jugador))
+    this.usersArray.push(this.listado[i].jugador);
   }
 
+  this.usersArray.forEach(element => {
+    let Victorias =  JSON.parse(localStorage.getItem('juegos')).filter(juegos => juegos.gano === "Gano" &&  juegos.jugador ==  element).length;
+    let Derrotas =  JSON.parse(localStorage.getItem('juegos')).filter(juegos => juegos.gano === "Perdio" &&  juegos.jugador ==  element).length;
+    var temp = new Object();
+    temp["user"] = element;
+    temp["victorias"] = Victorias;
+    temp["derrotas"] = Derrotas;
+    data.push(temp);
+  });
 
+  this.listaJugadores = data;
+this.listado = this.listaJugadores;
+  console.log(this.listaJugadores);
+}
+
+
+
+  
   TraerTodos(){
-    //alert("totos");
-    this.miJugadoresServicio.traertodos('jugadores/','todos').then(data=>{
-      //console.info("jugadores listado",(data));
-      this.listado= data;
 
-    })
+  this.listado  = this.listaJugadores;
+
+
   }
-  TraerGanadores(){
-    this.miJugadoresServicio.traertodos('jugadores/','ganadores').then(data=>{
-      //console.info("jugadores listado",(data));
-      this.listado= data;
 
-    })
+
+  TraerGanadores(){
+    this.listado = this.listaJugadores.filter(jugador => jugador.victorias > 0);
+    this.listado.sort((a, b) => (b.victorias > a.victorias) ? 1 : -1)
+
+
   }
   TraerPerdedores(){
-    this.miJugadoresServicio.traertodos('jugadores/','perdedores').then(data=>{
-      //console.info("jugadores listado",(data));
-      this.listado= data;
+    this.listado = this.listaJugadores.filter(jugador => jugador.derrotas > 0);
+    this.listado.sort((a, b) => (b.derrotas > a.derrotas) ? 1 : -1)
 
-    })
   }
 
 }

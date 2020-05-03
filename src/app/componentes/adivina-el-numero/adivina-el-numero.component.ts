@@ -35,8 +35,9 @@ export class AdivinaElNumeroComponent implements OnInit {
     if (this.nuevoJuego.verificar()){
       
       this.enviarJuego.emit(this.nuevoJuego);
-      this.MostarMensaje("Sos un Genio!!!",true);
+      this.MostarMensaje("Ganaste!!!",true);
       this.nuevoJuego.numeroSecreto=0;
+      this.nuevoJuego.Grabar("Adivina el Numero", "Gano");
 
     }else{
 
@@ -80,6 +81,7 @@ export class AdivinaElNumeroComponent implements OnInit {
         x.className = "show Ganador";
       }else{
         x.className = "show Perdedor";
+        this.nuevoJuego.Grabar("Adivina el Numero", "Perdio");
       }
     var modelo=this;
     setTimeout(function(){ 

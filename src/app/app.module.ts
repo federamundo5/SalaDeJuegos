@@ -64,7 +64,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { TatetiComponent } from './componentes/tateti/tateti.component';
 import { AdivinaLaBanderaComponent } from './componentes/adivina-la-bandera/adivina-la-bandera.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -93,7 +99,8 @@ import { AdivinaLaBanderaComponent } from './componentes/adivina-la-bandera/adiv
     SexoPipe,
     PiedraPapelTijeraComponent,
     TatetiComponent,
-    AdivinaLaBanderaComponent
+    AdivinaLaBanderaComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -108,7 +115,10 @@ import { AdivinaLaBanderaComponent } from './componentes/adivina-la-bandera/adiv
     MatToolbarModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
-    })
+    }),
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     // NgbModule.forRoot(MiRuteo),
     // importo el ruteo
     // RouterModule.forRoot(MiRuteo)

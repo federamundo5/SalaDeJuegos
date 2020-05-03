@@ -54,18 +54,16 @@
     <form class="modal-content animate" >
       <div class="container">
         <label><b>Email</b></label>
-        <input type="text" placeholder="Ingresa tu correo" name="email" required>
+        <input type="text" placeholder="Ingresa tu correo" [(ngModel)]="email" name="email" required>
   
         <label><b>Clave</b></label>
-        <input type="password" placeholder="Ingrese la clave" name="psw" required>
-  
-        <label><b>Repita la clave</b></label>
-        <input type="password" placeholder="Repita la  clave" name="psw-repeat" required>
-        <input type="checkbox" checked="checked">Recordar mis datos
-          
+        <input type="password"  id="clave"  minlength="6" pattern="[a-zA-Z0-9]{6}" placeholder="Ingrese la clave" [(ngModel)]="clave" name="clave" required>
+        <div *ngIf="lenghtError">
+          Debe tener 6 caracteres.
+        </div>
         <div class="clearfix">
           <button type="button" onclick="document.getElementById('id01').style.display='none'"   class="cancelbtn2">Cancelar</button>
-          <button type="submit" class="signupbtn">Registrarme</button>
+          <button type="submit"  (click)="Registrar()"  class="signupbtn">Registrarme</button>
         </div>
       </div>
     </form>

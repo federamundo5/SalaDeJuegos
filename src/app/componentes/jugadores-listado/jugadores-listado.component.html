@@ -4,13 +4,13 @@
 
 <ul class="nav" id="navigation">
   <li class="nav-item">
-    <a class="nav-link" href="#">Todos los jugadores</a>
+    <a class="nav-link" (click)="TraerTodos()">Todos los jugadores</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Los ganadores</a>
+    <a class="nav-link" (click)="TraerGanadores()">Los ganadores</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Los perdedores</a>
+    <a class="nav-link" (click)="TraerPerdedores()">Los perdedores</a>
   </li>
 </ul>
 
@@ -22,18 +22,15 @@
   <thead id="theadResults">
       <tr>
         <th>Usuario</th>
-        <th>Cuit</th>
-        <th>Sexo</th>
-        <th>Gano</th>
+        <th>Victorias</th>
+        <th>Derrotas</th>
       </tr>
   </thead>
   <tbody>
     <tr *ngFor="let jugador of listado" >
-      <td>{{jugador.usuario}} </td>
-      <td>{{jugador.cuit}} </td> 
-      <td>{{jugador.sexo | sexo| uppercase}} </td> 
-      <td>{{jugador.gano}} </td> 
-      
+      <td>{{jugador.user}} </td>
+      <td>{{jugador.victorias}} </td> 
+      <td>{{jugador.derrotas}} </td> 
     </tr>
   </tbody>
 </table>

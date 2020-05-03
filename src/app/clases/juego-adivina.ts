@@ -1,4 +1,5 @@
 import { Juego } from '../clases/juego'
+import { AuthService } from './../servicios/authservice.service'
 
 export class JuegoAdivina extends  Juego {
     numeroSecreto: number = 0;
@@ -27,4 +28,6 @@ export class JuegoAdivina extends  Juego {
         }
         return "Te pasaste";
       }
+
+
 }

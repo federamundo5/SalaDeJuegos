@@ -3,6 +3,7 @@ import { JuegoAgilidad } from '../../clases/juego-agilidad'
 
 import {Subscription} from "rxjs";
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { JuegoPiedraPapelTijera } from '../../clases/juego-piedra-papel-tijera'
 
 
 @Component({
@@ -20,7 +21,15 @@ export class PiedraPapelTijeraComponent implements OnInit {
   playerSelected = -1;
   loading= false;
   isResultShow = false;
+  juego: JuegoPiedraPapelTijera;
+
   
+  
+  constructor() 
+  {
+    this.juego = new JuegoPiedraPapelTijera();
+  }
+
   // theResult -  0 winner
   //              1 lose
   //              2 tie
@@ -75,10 +84,12 @@ export class PiedraPapelTijeraComponent implements OnInit {
       // YOU WIN
       this.theResult = 0;
       this.scores[0] = this.scores[0]+1;
+      this.juego.Grabar("Piedra Papel o Tijera", "Gano");
     }
     else{
       // YOU LOSE
       this.theResult = 1;
+      this.juego.Grabar("Piedra Papel o Tijera", "Perdio");
         this.scores[1] = this.scores[1]+1;
     }
  }

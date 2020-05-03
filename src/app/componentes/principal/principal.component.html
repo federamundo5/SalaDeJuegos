@@ -4,10 +4,12 @@
 
 <app-cabecera>  </app-cabecera>
 
+<div [hidden]="logeado"  class="menu-container">
+  Por favor Loguearse para ingresar a la sala de juegos.
+</div>
 
+<div [hidden]="!logeado"  class="menu-container">
 
-<div class="menu-container">
-  
   <div class="hex-wrapper" routerLink="/Juegos">
     <div class="hex-row shift">
       <div class="hexagon" id="nav-home" >

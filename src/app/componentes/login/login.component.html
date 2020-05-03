@@ -7,10 +7,10 @@
 
       <div class="container">
         <label><b>Usuario</b></label>
-        <input type="text" placeholder="Usuario"  [(ngModel)]="Usuario.nombre"  name="uname" required>
+        <input type="text" placeholder="Usuario"  [(ngModel)]="email"  name="uname" required>
 
         <label><b>Clave</b></label>
-        <input type="password" placeholder="Clave"  [(ngModel)]="Usuario.clave" name="psw" required>
+        <input type="password" placeholder="Clave"  [(ngModel)]="clave" name="psw" required>
             
         <button *ngIf="logeando"  (click)="Entrar()" >Ingresar</button>
        
@@ -30,3 +30,5 @@
      
     </form>
 </div>
+
+<div id="snackbar">{{Mensajes}}</div>
