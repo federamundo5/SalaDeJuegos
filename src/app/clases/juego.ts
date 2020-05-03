@@ -1,8 +1,6 @@
 import { FirestoreService } from './../servicios/firestore.service'
 import { AngularFirestore } from '@angular/fire/firestore/firestore';
-import { LISTADO} from '../listado'
 
-import { Elemento} from '../clases/listado'
 
 
 export abstract class Juego {
@@ -11,7 +9,6 @@ export abstract class Juego {
   public gano = false;
   private fireService: FirestoreService;
   private AngularFire: AngularFirestore;
-  listado = LISTADO;
 
   constructor( nombre?: string, gano?: boolean,jugador?:string
     ) {
@@ -23,11 +20,8 @@ export abstract class Juego {
     var getUser = window.localStorage.getItem("User")
     console.log(getUser, juego, gano);
 
-    let elemento =  {} as Elemento;
 
-   elemento.gano = gano;
-   elemento.juego = juego;
-   elemento.user = getUser;
+ 
 
    var localStorageactual:any = new Array<any>();
    var usuarioLogueadoEnJuego:any;
@@ -38,7 +32,7 @@ export abstract class Juego {
 
   }
  
-  var juegoAGuardar= {"juego":elemento.juego,"jugador":getUser,"gano":elemento.gano};
+  var juegoAGuardar= {"juego":juego,"jugador":getUser,"gano":gano};
   localStorage.removeItem("juegos");
   localStorageactual.push(juegoAGuardar);
   localStorage.setItem("juegos",JSON.stringify(localStorageactual));

@@ -1,7 +1,5 @@
 
 import { Component, OnInit , Input, EventEmitter} from '@angular/core';
-import { LISTADO } from '../../listado'
-import { Elemento } from '../../clases/listado'
 
 @Component({
   selector: 'app-listado-de-resultados',
